@@ -1,0 +1,53 @@
+Redux
+
+Redux is a state management container. Which is used to maintain your applcation which usefull throughout the appli
+
+Redux maintain a specific state throught the application.
+
+Redux tree structure
+
+Store => store is configure with root file of the application. It is storing different kind of states. For storing Reducer => Reducer is a function which accept state and action. Based on action it is updated the current state val
+
+Action => Action is activity perform by the user. Based on action type it will track the state.
+
+In configuration =>
+
+API used Provider => Provider is container which configure the store in application root level.
+
+For accessing state value in anywhere in the component we utilise useSelector hooks.
+
+useSelector a redux hook use to get state value.
+
+If we need to update a state then using dispatch method. Dispatch method is import from useDispatch hook.
+
+Middleware => Middleware is pattern to convert sync operation into async format.
+
+var test = 1 + 2; test = 3; sync
+
+var result = res => {1 + 2}; async
+
+Middlware help us to capture action before update the redux state. Later on state will update by reducer only. Event middleware will catch action but not able to update the state. State update only by the reducers.
+
+async function one() {
+
+    console.log("fn one is represent")
+}
+
+async function two(){
+    console.log("fn one is represent")
+}
+
+async function third(){
+    console.log("fn one is represent")
+}
+
+execution (one, two, third);
+
+function execution (one, two, three){
+
+three() // this function play middlware role.
+
+one()
+
+two()
+}
